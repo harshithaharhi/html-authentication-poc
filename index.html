@@ -17,25 +17,45 @@
 
 <form action="dashboard.html">
 
-<div class="input-group mb-3">
-<span class="input-group-text"><i class="bi bi-person"></i></span>
-<input type="text" class="form-control" placeholder="Username">
+<!-- Username -->
+<div class="mb-3">
+<label class="form-label text-white">Username</label>
+
+<div class="input-group">
+<span class="input-group-text">
+<i class="bi bi-person"></i>
+</span>
+
+<input type="text" name="username" class="form-control"
+placeholder="Enter Username"
+required
+oninvalid="this.setCustomValidity('Enter username')"
+oninput="this.setCustomValidity('')">
+</div>
 </div>
 
-<div class="input-group mb-3">
-<span class="input-group-text"><i class="bi bi-lock"></i></span>
-<input type="password" id="password" class="form-control" placeholder="Password">
+<!-- Password -->
+<div class="mb-3">
+<label class="form-label text-white">Password</label>
+
+<div class="input-group">
+<span class="input-group-text">
+<i class="bi bi-lock"></i>
+</span>
+
+<input type="password" id="password" name="password" class="form-control"
+placeholder="Enter Password"
+required
+oninvalid="this.setCustomValidity('Enter password')"
+oninput="this.setCustomValidity('')">
+
 <span class="input-group-text" onclick="togglePassword()" style="cursor:pointer">
 <i class="bi bi-eye"></i>
 </span>
 </div>
+</div>
 
 <button class="btn btn-primary w-100">Login</button>
-
-<div class="text-center mt-3">
-<a href="forgot-password.html">Forgot Password?</a><br>
-<a href="register.html">Create Account</a>
-</div>
 
 </form>
 
@@ -43,8 +63,8 @@
 
 <script>
 function togglePassword(){
-let pass=document.getElementById("password");
-pass.type = pass.type === "password" ? "text" : "password";
+let p=document.getElementById("password");
+p.type = p.type === "password" ? "text" : "password";
 }
 </script>
 
