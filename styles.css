@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body{
 font-family: 'Poppins', sans-serif;
 background: linear-gradient(135deg,#667eea,#764ba2);
 min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 .card{
 width:350px;
 border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+padding:25px;
 }
 
 .btn{
@@ -20,13 +26,8 @@ transform:scale(1.05);
 
 a{
 text-decoration:none;
-color:#333;
 }
 
 a:hover{
 text-decoration:underline;
-}
-
-h3{
-font-weight:bold;
 }
