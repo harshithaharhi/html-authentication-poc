@@ -17,14 +17,17 @@
 
 <form action="index.html">
 
-<input class="form-control mb-3" placeholder="Full Name">
-<input class="form-control mb-3" placeholder="Email">
-<input class="form-control mb-3" placeholder="Phone">
+<input type="text" class="form-control mb-3" placeholder="Full Name" required>
 
-<input type="password" class="form-control mb-3" placeholder="Password">
-<input type="password" class="form-control mb-3" placeholder="Confirm Password">
+<input type="email" class="form-control mb-3" placeholder="Email" required>
 
-<button class="btn btn-primary w-100">Register</button>
+<input type="tel" class="form-control mb-3" placeholder="Phone" required pattern="[0-9]{10}" title="Enter 10 digit phone number">
+
+<input type="password" class="form-control mb-3" placeholder="Password" required minlength="6">
+
+<input type="password" class="form-control mb-3" placeholder="Confirm Password" required>
+
+<button type="submit" class="btn btn-primary w-100">Register</button>
 
 <div class="text-center mt-3">
 <a href="index.html">Already have an account?</a>
